@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="rootLauout" prefHeight="574.0" prefWidth="894.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.bsuir.vdishp.controller.TabBusController">
+   <center>
+      <TableView fx:id="busTableView" prefHeight="564.0" prefWidth="756.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="brandBusTableColumn" prefWidth="75.0" text="BusBrand" />
+          <TableColumn fx:id="ticketCostTableColumn" prefWidth="49.0" text="Ticket" />
+            <TableColumn fx:id="destinationTableColumn" prefWidth="82.0" text="Destination" />
+            <TableColumn fx:id="departureTableColumn" prefWidth="70.0" text="Departure" />
+            <TableColumn fx:id="platformTableColumn" prefWidth="75.0" text="Platform" />
+            <TableColumn fx:id="dateOfDepartureTableColumn" prefWidth="101.0" text="DateDeparture" />
+            <TableColumn fx:id="departureTimeTableColumn" prefWidth="101.0" text="DepartureTime" />
+            <TableColumn fx:id="dateOfArrivalTableColumn" minWidth="0.0" prefWidth="71.0" text="DateArrival" />
+            <TableColumn fx:id="arrivalTimeTableColumn" prefWidth="96.0" text="TimeArrival" />
+            <TableColumn fx:id="transitTimeTableColumn" prefWidth="79.0" text="TimeTransit" />
+            <TableColumn fx:id="dayTableColumn" prefWidth="51.0" text="Day" />
+        </columns>
+      </TableView>
+   </center>
+   <bottom>
+      <AnchorPane prefHeight="176.0" prefWidth="894.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="32.0" prefWidth="233.0" text="Временной интервал" />
+            <DatePicker fx:id="dateFrom" layoutX="44.0" layoutY="46.0" />
+            <Label layoutX="14.0" layoutY="50.0" text="С" />
+            <Label layoutX="14.0" layoutY="88.0" text="По" />
+            <DatePicker fx:id="dateTo" layoutX="44.0" layoutY="84.0" />
+            <TextField fx:id="timeFrom" layoutX="305.0" layoutY="46.0" />
+            <TextField fx:id="timeTo" layoutX="305.0" layoutY="84.0" />
+            <Label layoutX="366.0" layoutY="22.0" text="Время" />
+            <Button layoutX="221.0" layoutY="127.0" mnemonicParsing="false" onAction="#filterDateAndTime" text="Отфильтровать" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>
